@@ -57,10 +57,10 @@ RM = /home/kali/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5284.51/bin/c
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kali/BackendProjects/anomaly_detection
+CMAKE_SOURCE_DIR = /home/kali/BackendProjects/AnomalyDetector
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kali/BackendProjects/anomaly_detection/cmake-build-debug
+CMAKE_BINARY_DIR = /home/kali/BackendProjects/AnomalyDetector/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/BackendProjects/anomaly_detection/cmake-build-debug/CMakeFiles /home/kali/BackendProjects/anomaly_detection/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/BackendProjects/AnomalyDetector/cmake-build-debug/CMakeFiles /home/kali/BackendProjects/AnomalyDetector/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/BackendProjects/anomaly_detection/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/BackendProjects/AnomalyDetector/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -153,6 +153,30 @@ MainTrain.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/anomaly_detection_util.dir/build.make CMakeFiles/anomaly_detection_util.dir/MainTrain.cpp.s
 .PHONY : MainTrain.cpp.s
 
+SimpleAnomalyDetector.o: SimpleAnomalyDetector.cpp.o
+.PHONY : SimpleAnomalyDetector.o
+
+# target to build an object file
+SimpleAnomalyDetector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/anomaly_detection_util.dir/build.make CMakeFiles/anomaly_detection_util.dir/SimpleAnomalyDetector.cpp.o
+.PHONY : SimpleAnomalyDetector.cpp.o
+
+SimpleAnomalyDetector.i: SimpleAnomalyDetector.cpp.i
+.PHONY : SimpleAnomalyDetector.i
+
+# target to preprocess a source file
+SimpleAnomalyDetector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/anomaly_detection_util.dir/build.make CMakeFiles/anomaly_detection_util.dir/SimpleAnomalyDetector.cpp.i
+.PHONY : SimpleAnomalyDetector.cpp.i
+
+SimpleAnomalyDetector.s: SimpleAnomalyDetector.cpp.s
+.PHONY : SimpleAnomalyDetector.s
+
+# target to generate assembly for a file
+SimpleAnomalyDetector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/anomaly_detection_util.dir/build.make CMakeFiles/anomaly_detection_util.dir/SimpleAnomalyDetector.cpp.s
+.PHONY : SimpleAnomalyDetector.cpp.s
+
 anomaly_detection_util.o: anomaly_detection_util.cpp.o
 .PHONY : anomaly_detection_util.o
 
@@ -177,6 +201,30 @@ anomaly_detection_util.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/anomaly_detection_util.dir/build.make CMakeFiles/anomaly_detection_util.dir/anomaly_detection_util.cpp.s
 .PHONY : anomaly_detection_util.cpp.s
 
+timeseries.o: timeseries.cpp.o
+.PHONY : timeseries.o
+
+# target to build an object file
+timeseries.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/anomaly_detection_util.dir/build.make CMakeFiles/anomaly_detection_util.dir/timeseries.cpp.o
+.PHONY : timeseries.cpp.o
+
+timeseries.i: timeseries.cpp.i
+.PHONY : timeseries.i
+
+# target to preprocess a source file
+timeseries.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/anomaly_detection_util.dir/build.make CMakeFiles/anomaly_detection_util.dir/timeseries.cpp.i
+.PHONY : timeseries.cpp.i
+
+timeseries.s: timeseries.cpp.s
+.PHONY : timeseries.s
+
+# target to generate assembly for a file
+timeseries.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/anomaly_detection_util.dir/build.make CMakeFiles/anomaly_detection_util.dir/timeseries.cpp.s
+.PHONY : timeseries.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -189,9 +237,15 @@ help:
 	@echo "... MainTrain.o"
 	@echo "... MainTrain.i"
 	@echo "... MainTrain.s"
+	@echo "... SimpleAnomalyDetector.o"
+	@echo "... SimpleAnomalyDetector.i"
+	@echo "... SimpleAnomalyDetector.s"
 	@echo "... anomaly_detection_util.o"
 	@echo "... anomaly_detection_util.i"
 	@echo "... anomaly_detection_util.s"
+	@echo "... timeseries.o"
+	@echo "... timeseries.i"
+	@echo "... timeseries.s"
 .PHONY : help
 
 

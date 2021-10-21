@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kali/BackendProjects/AnomalyDetector/anomaly_detection_util.h
+
+/home/kali/BackendProjects/AnomalyDetector/timeseries.cpp
+timeseries.h
+/home/kali/BackendProjects/AnomalyDetector/timeseries.h
+anomaly_detection_util.h
+/home/kali/BackendProjects/AnomalyDetector/anomaly_detection_util.h
+
+/home/kali/BackendProjects/AnomalyDetector/timeseries.h
+iostream
+-
+iterator
+-
+map
+-
+vector
+-
+

@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="anomaly_detection_util"/>
+		<Option title="AnomalyDetector"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;"/>
@@ -82,13 +82,28 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/kali/BackendProjects/AnomalyDetector/AnomalyDetector.h">
+			<Option target="anomaly_detection_util"/>
+		</Unit>
 		<Unit filename="/home/kali/BackendProjects/AnomalyDetector/MainTrain.cpp">
+			<Option target="anomaly_detection_util"/>
+		</Unit>
+		<Unit filename="/home/kali/BackendProjects/AnomalyDetector/SimpleAnomalyDetector.cpp">
+			<Option target="anomaly_detection_util"/>
+		</Unit>
+		<Unit filename="/home/kali/BackendProjects/AnomalyDetector/SimpleAnomalyDetector.h">
 			<Option target="anomaly_detection_util"/>
 		</Unit>
 		<Unit filename="/home/kali/BackendProjects/AnomalyDetector/anomaly_detection_util.cpp">
 			<Option target="anomaly_detection_util"/>
 		</Unit>
 		<Unit filename="/home/kali/BackendProjects/AnomalyDetector/anomaly_detection_util.h">
+			<Option target="anomaly_detection_util"/>
+		</Unit>
+		<Unit filename="/home/kali/BackendProjects/AnomalyDetector/timeseries.cpp">
+			<Option target="anomaly_detection_util"/>
+		</Unit>
+		<Unit filename="/home/kali/BackendProjects/AnomalyDetector/timeseries.h">
 			<Option target="anomaly_detection_util"/>
 		</Unit>
 		<Unit filename="/home/kali/BackendProjects/AnomalyDetector/CMakeLists.txt">

@@ -8,8 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/kali/BackendProjects/anomaly_detection/MainTrain.cpp" "/home/kali/BackendProjects/anomaly_detection/cmake-build-debug/CMakeFiles/anomaly_detection_util.dir/MainTrain.cpp.o"
-  "/home/kali/BackendProjects/anomaly_detection/anomaly_detection_util.cpp" "/home/kali/BackendProjects/anomaly_detection/cmake-build-debug/CMakeFiles/anomaly_detection_util.dir/anomaly_detection_util.cpp.o"
+  "/home/kali/BackendProjects/AnomalyDetector/MainTrain.cpp" "/home/kali/BackendProjects/AnomalyDetector/cmake-build-debug/CMakeFiles/anomaly_detection_util.dir/MainTrain.cpp.o"
+  "/home/kali/BackendProjects/AnomalyDetector/SimpleAnomalyDetector.cpp" "/home/kali/BackendProjects/AnomalyDetector/cmake-build-debug/CMakeFiles/anomaly_detection_util.dir/SimpleAnomalyDetector.cpp.o"
+  "/home/kali/BackendProjects/AnomalyDetector/anomaly_detection_util.cpp" "/home/kali/BackendProjects/AnomalyDetector/cmake-build-debug/CMakeFiles/anomaly_detection_util.dir/anomaly_detection_util.cpp.o"
+  "/home/kali/BackendProjects/AnomalyDetector/timeseries.cpp" "/home/kali/BackendProjects/AnomalyDetector/cmake-build-debug/CMakeFiles/anomaly_detection_util.dir/timeseries.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

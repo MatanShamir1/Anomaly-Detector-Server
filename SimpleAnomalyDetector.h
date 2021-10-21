@@ -2,7 +2,6 @@
 
 #ifndef SIMPLEANOMALYDETECTOR_H_
 #define SIMPLEANOMALYDETECTOR_H_
-
 #include "anomaly_detection_util.h"
 #include "AnomalyDetector.h"
 #include <vector>

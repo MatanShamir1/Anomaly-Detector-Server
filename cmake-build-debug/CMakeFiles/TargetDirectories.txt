@@ -1,3 +1,3 @@
-/home/kali/BackendProjects/anomaly_detection/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/kali/BackendProjects/anomaly_detection/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/kali/BackendProjects/anomaly_detection/cmake-build-debug/CMakeFiles/anomaly_detection_util.dir
+/home/kali/BackendProjects/AnomalyDetector/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/kali/BackendProjects/AnomalyDetector/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/kali/BackendProjects/AnomalyDetector/cmake-build-debug/CMakeFiles/anomaly_detection_util.dir
