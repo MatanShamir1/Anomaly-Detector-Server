@@ -5,6 +5,8 @@
 #include <iterator>
 #include <map>
 #include <vector>
+#include <fstream>
+#include <sstream>
 
 using namespace std;
     class TimeSeries {
