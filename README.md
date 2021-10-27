@@ -1,3 +1,3 @@
-# anomaly_detection_util
-a basic library for further usage of anomaly detector.
+# AnomalyDetector
+a program that gives a an anomaly detection to given flight information.
 
