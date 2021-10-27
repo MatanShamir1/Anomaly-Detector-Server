@@ -11,15 +11,17 @@
 using namespace std;
     class TimeSeries {
         //private class members
-        int numColumns;
-        int numRows;
-        map<string, vector<float>> flightData;
+        int numOfFeatures;
+        int numDataPerFeature;
+        vector<pair<string, vector<float>*>> flightData;
 
         //private methods
         void readFromFile(const char *CSVfileName);
+        void insertFeatures(stringstream& columnNamesBuff);
+        void insertData(ifstream& dataCSVFile, string fileLine);
 
     public:
-        TimeSeries(const char *CSVfileName);
+        explicit TimeSeries(const char *CSVfileName);
     };
 
 #endif /* TIMESERIES_H_ */
