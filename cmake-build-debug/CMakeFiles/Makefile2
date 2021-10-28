@@ -45,19 +45,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/kali/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5284.51/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /opt/CLion/clion-2021.2.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/kali/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5284.51/bin/cmake/linux/bin/cmake -E rm -f
+RM = /opt/CLion/clion-2021.2.2/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kali/BackendProjects/AnomalyDetector
+CMAKE_SOURCE_DIR = /home/itamar/CLionProjects/AnomalyDetector
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kali/BackendProjects/AnomalyDetector/cmake-build-debug
+CMAKE_BINARY_DIR = /home/itamar/CLionProjects/AnomalyDetector/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/anomaly_detection_util.dir/clean
 CMakeFiles/anomaly_detection_util.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/anomaly_detection_util.dir/build.make CMakeFiles/anomaly_detection_util.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/anomaly_detection_util.dir/build.make CMakeFiles/anomaly_detection_util.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kali/BackendProjects/AnomalyDetector/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target anomaly_detection_util"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/itamar/CLionProjects/AnomalyDetector/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target anomaly_detection_util"
 .PHONY : CMakeFiles/anomaly_detection_util.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/anomaly_detection_util.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/BackendProjects/AnomalyDetector/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/itamar/CLionProjects/AnomalyDetector/cmake-build-debug/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/anomaly_detection_util.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kali/BackendProjects/AnomalyDetector/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/itamar/CLionProjects/AnomalyDetector/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/anomaly_detection_util.dir/rule
 
 # Convenience name for target.

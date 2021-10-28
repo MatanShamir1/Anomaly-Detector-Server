@@ -1,4 +1,4 @@
-# Install script for directory: /home/kali/BackendProjects/AnomalyDetector
+# Install script for directory: /home/itamar/CLionProjects/AnomalyDetector
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/kali/BackendProjects/AnomalyDetector/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/itamar/CLionProjects/AnomalyDetector/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
