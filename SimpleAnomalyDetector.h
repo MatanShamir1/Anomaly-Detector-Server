@@ -20,6 +20,7 @@ struct correlatedFeatures{
 class SimpleAnomalyDetector:public TimeSeriesAnomalyDetector{
 	vector<correlatedFeatures> cf;
     vector<Point> createPoints(float *,float* ,int);
+    float maxDevPoint(Line,Point**,int size);
 public:
 	SimpleAnomalyDetector();
 	virtual ~SimpleAnomalyDetector();
