@@ -1,3 +1,3 @@
-/home/itamar/CLionProjects/AnomalyDetector/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/itamar/CLionProjects/AnomalyDetector/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/itamar/CLionProjects/AnomalyDetector/cmake-build-debug/CMakeFiles/anomaly_detection_util.dir
+/home/kali/CLionProjects/AnomalyDetector/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/kali/CLionProjects/AnomalyDetector/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/kali/CLionProjects/AnomalyDetector/cmake-build-debug/CMakeFiles/anomaly_detection_util.dir

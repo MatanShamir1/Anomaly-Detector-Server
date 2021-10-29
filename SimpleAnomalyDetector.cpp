@@ -32,28 +32,29 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
             appendData.corrlation = corealtion;
             appendData.feature1 = ts.getNameOfFeature(i);
             appendData.feature2 = ts.getNameOfFeature(currentCorrelate);
-            vector<Point> featurePoint = createPoints(&f1[0], &f2[0], num_of_samples);
-            Point *points = nullptr;
-            std::move(featurePoint.begin(), featurePoint.end(), points);
-            appendData.lin_reg = linear_reg(&points, num_of_samples);
-            appendData.threshold = maxDevPoint(appendData.lin_reg, points, num_of_samples);
+            vector<Point*> featurePoint = createPoints(&f1[0], &f2[0], num_of_samples);
+            //Point *points = nullptr;
+            //std::copy(featurePoint.begin(), featurePoint.end(), points);////////////
+            appendData.lin_reg = linear_reg(&featurePoint[0], num_of_samples);
+            appendData.threshold = maxDevPoint(appendData.lin_reg, &featurePoint[0], num_of_samples);
             cf.push_back(appendData);
         }
     }
 }
 
-vector<Point> SimpleAnomalyDetector::createPoints(float *f1, float *f2, int size) {
-    vector<Point> featuresPoints;
+vector<Point*> SimpleAnomalyDetector::createPoints(float *f1, float *f2, int size) {
+    vector<Point*> featuresPoints;
     for (int i = 0; i < size; i++) {
-        featuresPoints.push_back(Point(f1[i], f2[i]));
+        Point p = Point(f1[i], f2[i]);
+        featuresPoints.push_back(&p);
     }
     return featuresPoints;
 }
 
-float SimpleAnomalyDetector::maxDevPoint(Line f1,const Point* const &points, int size) {
-    float maxDev = dev(points[0], f1);
+float SimpleAnomalyDetector::maxDevPoint(Line f1,Point** points, int size) {
+    float maxDev = dev(**points, f1);
     for (int i = 1; i < size; i++) {
-        float check = dev(points[i], f1);
+        float check = dev(*((*points)+i), f1);
         if (check > maxDev) {
             maxDev = check;
         }
@@ -71,11 +72,12 @@ vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries &ts) {
     //each variable initiated in the for loop is a const reference, not a shallow copy!
     for (const correlatedFeatures& i1: cf) {
         //we use create points because this is data of a new input of a flight.
-        vector<Point> dataPoints = createPoints(&ts.getDataOfFeature(ts.indexOfFeature(i1.feature1))[0],
+        vector<Point*> dataPoints = createPoints(&ts.getDataOfFeature(ts.indexOfFeature(i1.feature1))[0],
                                                 &ts.getDataOfFeature(ts.indexOfFeature(i1.feature2))[0],
                                                 ts.getNumSamples());
-        for (Point p: dataPoints) {
-            if (dev(p, i1.lin_reg) > i1.threshold) {
+        for (Point* p: dataPoints) {
+            Point point = *p;
+            if (dev(point, i1.lin_reg) > i1.threshold) {
                 AnomalyReport deviation = AnomalyReport(i1.feature1 + "-" + i1.feature2, i);
                 i++;
                 report.push_back(deviation);

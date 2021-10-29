@@ -29,6 +29,7 @@ void TimeSeries::insertData(ifstream& dataCSVFile, string fileLine) {
             float value;
             token_to_int>>value;
             this->flightData[column_index].second.push_back(value);
+            column_index++;
         }
         this->numOfSamples++;
     }
@@ -101,9 +102,9 @@ Point TimeSeries:: getFeaturesData(int index, string feature1, string feature2) 
     float first, second;
     for(int i = 0; i < this->numOfFeatures; i++){
         if(flightData.at(i).first == feature1){
-            first = this->flightData.at(i).second->at(index);
+            first = this->flightData.at(i).second.at(index);
         } else if (flightData.at(i).first == feature2){
-            second = this->flightData.at(i).second->at(index);
+            second = this->flightData.at(i).second.at(index);
         }
     }
     return Point(first, second);

@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/CLion/clion-2021.2.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/kali/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5284.51/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /opt/CLion/clion-2021.2.2/bin/cmake/linux/bin/cmake -E rm -f
+RM = /home/kali/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5284.51/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/itamar/CLionProjects/AnomalyDetector
+CMAKE_SOURCE_DIR = /home/kali/CLionProjects/AnomalyDetector
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/itamar/CLionProjects/AnomalyDetector/cmake-build-debug
+CMAKE_BINARY_DIR = /home/kali/CLionProjects/AnomalyDetector/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/anomaly_detection_util.dir/depend.make
@@ -68,55 +68,55 @@ include CMakeFiles/anomaly_detection_util.dir/flags.make
 
 CMakeFiles/anomaly_detection_util.dir/MainTrain.cpp.o: CMakeFiles/anomaly_detection_util.dir/flags.make
 CMakeFiles/anomaly_detection_util.dir/MainTrain.cpp.o: ../MainTrain.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/itamar/CLionProjects/AnomalyDetector/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/anomaly_detection_util.dir/MainTrain.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/anomaly_detection_util.dir/MainTrain.cpp.o -c /home/itamar/CLionProjects/AnomalyDetector/MainTrain.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kali/CLionProjects/AnomalyDetector/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/anomaly_detection_util.dir/MainTrain.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/anomaly_detection_util.dir/MainTrain.cpp.o -c /home/kali/CLionProjects/AnomalyDetector/MainTrain.cpp
 
 CMakeFiles/anomaly_detection_util.dir/MainTrain.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anomaly_detection_util.dir/MainTrain.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itamar/CLionProjects/AnomalyDetector/MainTrain.cpp > CMakeFiles/anomaly_detection_util.dir/MainTrain.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kali/CLionProjects/AnomalyDetector/MainTrain.cpp > CMakeFiles/anomaly_detection_util.dir/MainTrain.cpp.i
 
 CMakeFiles/anomaly_detection_util.dir/MainTrain.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anomaly_detection_util.dir/MainTrain.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itamar/CLionProjects/AnomalyDetector/MainTrain.cpp -o CMakeFiles/anomaly_detection_util.dir/MainTrain.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kali/CLionProjects/AnomalyDetector/MainTrain.cpp -o CMakeFiles/anomaly_detection_util.dir/MainTrain.cpp.s
 
 CMakeFiles/anomaly_detection_util.dir/anomaly_detection_util.cpp.o: CMakeFiles/anomaly_detection_util.dir/flags.make
 CMakeFiles/anomaly_detection_util.dir/anomaly_detection_util.cpp.o: ../anomaly_detection_util.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/itamar/CLionProjects/AnomalyDetector/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/anomaly_detection_util.dir/anomaly_detection_util.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/anomaly_detection_util.dir/anomaly_detection_util.cpp.o -c /home/itamar/CLionProjects/AnomalyDetector/anomaly_detection_util.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kali/CLionProjects/AnomalyDetector/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/anomaly_detection_util.dir/anomaly_detection_util.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/anomaly_detection_util.dir/anomaly_detection_util.cpp.o -c /home/kali/CLionProjects/AnomalyDetector/anomaly_detection_util.cpp
 
 CMakeFiles/anomaly_detection_util.dir/anomaly_detection_util.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anomaly_detection_util.dir/anomaly_detection_util.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itamar/CLionProjects/AnomalyDetector/anomaly_detection_util.cpp > CMakeFiles/anomaly_detection_util.dir/anomaly_detection_util.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kali/CLionProjects/AnomalyDetector/anomaly_detection_util.cpp > CMakeFiles/anomaly_detection_util.dir/anomaly_detection_util.cpp.i
 
 CMakeFiles/anomaly_detection_util.dir/anomaly_detection_util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anomaly_detection_util.dir/anomaly_detection_util.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itamar/CLionProjects/AnomalyDetector/anomaly_detection_util.cpp -o CMakeFiles/anomaly_detection_util.dir/anomaly_detection_util.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kali/CLionProjects/AnomalyDetector/anomaly_detection_util.cpp -o CMakeFiles/anomaly_detection_util.dir/anomaly_detection_util.cpp.s
 
 CMakeFiles/anomaly_detection_util.dir/timeseries.cpp.o: CMakeFiles/anomaly_detection_util.dir/flags.make
 CMakeFiles/anomaly_detection_util.dir/timeseries.cpp.o: ../timeseries.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/itamar/CLionProjects/AnomalyDetector/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/anomaly_detection_util.dir/timeseries.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/anomaly_detection_util.dir/timeseries.cpp.o -c /home/itamar/CLionProjects/AnomalyDetector/timeseries.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kali/CLionProjects/AnomalyDetector/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/anomaly_detection_util.dir/timeseries.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/anomaly_detection_util.dir/timeseries.cpp.o -c /home/kali/CLionProjects/AnomalyDetector/timeseries.cpp
 
 CMakeFiles/anomaly_detection_util.dir/timeseries.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anomaly_detection_util.dir/timeseries.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itamar/CLionProjects/AnomalyDetector/timeseries.cpp > CMakeFiles/anomaly_detection_util.dir/timeseries.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kali/CLionProjects/AnomalyDetector/timeseries.cpp > CMakeFiles/anomaly_detection_util.dir/timeseries.cpp.i
 
 CMakeFiles/anomaly_detection_util.dir/timeseries.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anomaly_detection_util.dir/timeseries.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itamar/CLionProjects/AnomalyDetector/timeseries.cpp -o CMakeFiles/anomaly_detection_util.dir/timeseries.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kali/CLionProjects/AnomalyDetector/timeseries.cpp -o CMakeFiles/anomaly_detection_util.dir/timeseries.cpp.s
 
 CMakeFiles/anomaly_detection_util.dir/SimpleAnomalyDetector.cpp.o: CMakeFiles/anomaly_detection_util.dir/flags.make
 CMakeFiles/anomaly_detection_util.dir/SimpleAnomalyDetector.cpp.o: ../SimpleAnomalyDetector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/itamar/CLionProjects/AnomalyDetector/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/anomaly_detection_util.dir/SimpleAnomalyDetector.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/anomaly_detection_util.dir/SimpleAnomalyDetector.cpp.o -c /home/itamar/CLionProjects/AnomalyDetector/SimpleAnomalyDetector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kali/CLionProjects/AnomalyDetector/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/anomaly_detection_util.dir/SimpleAnomalyDetector.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/anomaly_detection_util.dir/SimpleAnomalyDetector.cpp.o -c /home/kali/CLionProjects/AnomalyDetector/SimpleAnomalyDetector.cpp
 
 CMakeFiles/anomaly_detection_util.dir/SimpleAnomalyDetector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/anomaly_detection_util.dir/SimpleAnomalyDetector.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itamar/CLionProjects/AnomalyDetector/SimpleAnomalyDetector.cpp > CMakeFiles/anomaly_detection_util.dir/SimpleAnomalyDetector.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kali/CLionProjects/AnomalyDetector/SimpleAnomalyDetector.cpp > CMakeFiles/anomaly_detection_util.dir/SimpleAnomalyDetector.cpp.i
 
 CMakeFiles/anomaly_detection_util.dir/SimpleAnomalyDetector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/anomaly_detection_util.dir/SimpleAnomalyDetector.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itamar/CLionProjects/AnomalyDetector/SimpleAnomalyDetector.cpp -o CMakeFiles/anomaly_detection_util.dir/SimpleAnomalyDetector.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kali/CLionProjects/AnomalyDetector/SimpleAnomalyDetector.cpp -o CMakeFiles/anomaly_detection_util.dir/SimpleAnomalyDetector.cpp.s
 
 # Object files for target anomaly_detection_util
 anomaly_detection_util_OBJECTS = \
@@ -134,7 +134,7 @@ anomaly_detection_util: CMakeFiles/anomaly_detection_util.dir/timeseries.cpp.o
 anomaly_detection_util: CMakeFiles/anomaly_detection_util.dir/SimpleAnomalyDetector.cpp.o
 anomaly_detection_util: CMakeFiles/anomaly_detection_util.dir/build.make
 anomaly_detection_util: CMakeFiles/anomaly_detection_util.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/itamar/CLionProjects/AnomalyDetector/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable anomaly_detection_util"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kali/CLionProjects/AnomalyDetector/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable anomaly_detection_util"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/anomaly_detection_util.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -146,6 +146,6 @@ CMakeFiles/anomaly_detection_util.dir/clean:
 .PHONY : CMakeFiles/anomaly_detection_util.dir/clean
 
 CMakeFiles/anomaly_detection_util.dir/depend:
-	cd /home/itamar/CLionProjects/AnomalyDetector/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/itamar/CLionProjects/AnomalyDetector /home/itamar/CLionProjects/AnomalyDetector /home/itamar/CLionProjects/AnomalyDetector/cmake-build-debug /home/itamar/CLionProjects/AnomalyDetector/cmake-build-debug /home/itamar/CLionProjects/AnomalyDetector/cmake-build-debug/CMakeFiles/anomaly_detection_util.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kali/CLionProjects/AnomalyDetector/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kali/CLionProjects/AnomalyDetector /home/kali/CLionProjects/AnomalyDetector /home/kali/CLionProjects/AnomalyDetector/cmake-build-debug /home/kali/CLionProjects/AnomalyDetector/cmake-build-debug /home/kali/CLionProjects/AnomalyDetector/cmake-build-debug/CMakeFiles/anomaly_detection_util.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/anomaly_detection_util.dir/depend
 
