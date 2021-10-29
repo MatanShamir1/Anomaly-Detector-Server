@@ -9,7 +9,7 @@ SimpleAnomalyDetector::~SimpleAnomalyDetector() {
     // TODO Auto-generated destructor stub
 }
 
-
+//azran is the king
 void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
     //this is minimal correlation, each time there's a correlation the max updates.
     int num_of_samples = ts.getNumSamples();
