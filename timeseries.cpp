@@ -75,6 +75,16 @@ vector<float> TimeSeries:: getDataOfFeature(int index) const{
     return this->flightData.at(index).second;
 }
 
+int TimeSeries::indexOfFeature(string feature) const{
+    int result = 0;
+    for(pair<string,vector<float>> a_pair :this->flightData){
+        if(a_pair.first == feature){
+            return result;
+        }
+        result++;
+    }
+}
+
 //class getter: get a vector of all the features.
 vector<string> TimeSeries::getFeatureVector() const {
     vector<string> features;
@@ -83,6 +93,9 @@ vector<string> TimeSeries::getFeatureVector() const {
     }
     return features;
 }
+
+
+
 //class getter: given 2 features and an index, this method returns a point of the specific sample of the two features.
 Point TimeSeries:: getFeaturesData(int index, string feature1, string feature2) const{
     float first, second;
@@ -95,4 +108,3 @@ Point TimeSeries:: getFeaturesData(int index, string feature1, string feature2) 
     }
     return Point(first, second);
 }
-

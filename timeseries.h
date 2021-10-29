@@ -10,27 +10,28 @@
 #include "anomaly_detection_util.h"
 
 using namespace std;
-    class TimeSeries {
-        //private class members
-        int numOfFeatures;
-        int numOfSamples;
-        vector<pair<string, vector<float>>> flightData;
+class TimeSeries {
+    //private class members
+    int numOfFeatures;
+    int numOfSamples;
+    vector<pair<string, vector<float>>> flightData;
 
-        //private methods
-        void readFromFile(const char *CSVfileName);
-        void insertFeatures(stringstream& columnNamesBuff);
-        void insertData(ifstream& dataCSVFile, string fileLine);
+    //private methods
+    void readFromFile(const char *CSVfileName);
+    void insertFeatures(stringstream& columnNamesBuff);
+    void insertData(ifstream& dataCSVFile, string fileLine);
 
-    public:
-        //constructor:
-        explicit TimeSeries(const char *CSVfileName);
-        //class getters:
-        int getNumSamples() const;
-        int getNumFeatures() const;
-        vector<string> getFeatureVector() const;
-        string getNameOfFeature(int index) const;
-        vector<float> getDataOfFeature(int) const;
-        Point getFeaturesData(int index,string feature1, string feature2) const;
-    };
+public:
+    //constructor:
+    explicit TimeSeries(const char *CSVfileName);
+    //class getters:
+    int getNumSamples() const;
+    int getNumFeatures() const;
+    vector<string> getFeatureVector() const;
+    int indexOfFeature(string) const;
+    string getNameOfFeature(int index) const;
+    vector<float> getDataOfFeature(int) const;
+    Point getFeaturesData(int index,string feature1, string feature2) const;
+};
 
 #endif /* TIMESERIES_H_ */
