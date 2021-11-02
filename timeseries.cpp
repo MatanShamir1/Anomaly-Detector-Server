@@ -19,7 +19,7 @@ void TimeSeries::insertFeatures(stringstream& columnNamesBuff) {
 
 void TimeSeries::insertData(ifstream& dataCSVFile, string fileLine) {
     //as long as able to read more lines of the file, divided by commas, insert to the specific vector of a category.
-    int column_index=0;
+    int column_index;
     string token;
     while(getline(dataCSVFile,fileLine)) {
         column_index=0;

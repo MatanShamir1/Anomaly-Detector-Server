@@ -60,8 +60,8 @@ float pearson(float *x, float *y, int size) {
     float covariance = cov(x, y, size);
     float varianceX = var(x, size);
     float varianceY = var(y, size);
-    float mulitflyXY = sqrt(varianceX) * sqrt(varianceY);
-    return (float) (covariance / mulitflyXY);
+    float mulitplyXY = sqrt(varianceX) * sqrt(varianceY);
+    return (float) (covariance / mulitplyXY);
 }
 
 // performs a linear regression and returns the line equation

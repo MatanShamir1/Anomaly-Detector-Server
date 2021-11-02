@@ -19,7 +19,7 @@ class SimpleAnomalyDetector:public TimeSeriesAnomalyDetector{
     //private fields
     vector<correlatedFeatures> cf;
     //private methods
-    vector<Point*> createPoints(float* ,float* ,int);
+    vector<Point*> createPoints(const vector<float>& f1, const vector<float>& f2, int size);
     float maxDevPoint(Line f1, Point**, int);
 public:
     SimpleAnomalyDetector();
