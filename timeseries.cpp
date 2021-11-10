@@ -68,7 +68,7 @@ string TimeSeries::getNameOfFeature(int index) const{
     if(index >= flightData.size() || this->flightData.empty()){
         return NULL;
     }
-    return flightData.at(index).first;
+    return this->flightData.at(index).first;
 }
 
 //class getter: get the vector of data of a specific feature.

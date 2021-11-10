@@ -48,7 +48,7 @@ float cov(float *x, float *y, int size) {
     for (int i = 0; i < size; i++) {
         sum = sum + (x[i] - avg(x, size)) * (y[i] - avg(y, size));
     }
-    return (float) (sum / size);
+    return (sum / size);
 }
 
 
@@ -57,11 +57,12 @@ float pearson(float *x, float *y, int size) {
     if (size < 1) {
         return 0;
     }
-    float covariance = cov(x, y, size);
-    float varianceX = var(x, size);
-    float varianceY = var(y, size);
-    float mulitplyXY = sqrt(varianceX) * sqrt(varianceY);
-    return (float) (covariance / mulitplyXY);
+    return cov(x,y,size)/(sqrt(var(x,size))*sqrt(var(y,size)));
+//    float covariance = cov(x, y, size);
+//    float varianceX = var(x, size);
+//    float varianceY = var(y, size);
+//    float mulitplyXY = sqrt(varianceX) * sqrt(varianceY);
+//    return (float) (covariance / mulitplyXY);
 }
 
 // performs a linear regression and returns the line equation
