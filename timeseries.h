@@ -35,4 +35,3 @@ public:
 };
 
 #endif /* TIMESERIES_H_ */
-//azran ahmlek

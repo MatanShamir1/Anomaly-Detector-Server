@@ -70,8 +70,8 @@ vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries &ts) {
     for (const correlatedFeatures& i1: this->cf) {
         //we use create points because this is data of a new input of a flight.
         vector<Point*> dataPoints = createPoints(ts.getDataOfFeature(ts.indexOfFeature(i1.feature1)),
-                                                ts.getDataOfFeature(ts.indexOfFeature(i1.feature2)),
-                                                ts.getNumSamples());
+                                                 ts.getDataOfFeature(ts.indexOfFeature(i1.feature2)),
+                                                 ts.getNumSamples());
         for(size_t i=0;i<dataPoints.size();i++){
             if (dev(*dataPoints[i], i1.lin_reg) > i1.threshold) {
                 AnomalyReport deviation = AnomalyReport(i1.feature1 + "-" + i1.feature2, i+1);
