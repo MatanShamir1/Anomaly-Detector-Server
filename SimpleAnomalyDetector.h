@@ -21,14 +21,14 @@ struct correlatedFeatures {
 class SimpleAnomalyDetector : public TimeSeriesAnomalyDetector {
     //private fields
     vector<correlatedFeatures> cf;
-
+    //we need a field of current correlation and a setter, because the command can change this.
     //private methods
     vector<Point *> createPoints(const vector<float> &f1, const vector<float> &f2, int size);
-
+    float linearCorrelation;
     float maxDevPoint(Line f1, Point **, int);
 
 public:
-    SimpleAnomalyDetector();
+    SimpleAnomalyDetector(float linearCorrelation):linearCorrelation(linearCorrelation){}
 
     virtual ~SimpleAnomalyDetector();
 

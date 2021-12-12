@@ -5,10 +5,6 @@
 
 const float oneDotOne = 1.2;
 
-SimpleAnomalyDetector::SimpleAnomalyDetector() {
-
-}
-
 SimpleAnomalyDetector::~SimpleAnomalyDetector() {
     // TODO Auto-generated destructor stub
 }

@@ -1,5 +1,4 @@
 
-
 #ifndef COMMANDS_H_
 #define COMMANDS_H_
 
@@ -7,6 +6,7 @@
 #include <string.h>
 
 #include <fstream>
+#include <utility>
 #include <vector>
 #include "HybridAnomalyDetector.h"
 
@@ -20,48 +20,111 @@ public:
     virtual void read(float* f)=0;
     virtual ~DefaultIO(){}
 
+    void uploadFile(string inPath, string outPath) {
+        ifstream inputStream;
+        inputStream.open(inPath);
+        ofstream outputStream;
+        outputStream.open(outPath);
+        string line;
+
+        while (getline(inputStream, line) && line != "done") {
+            outputStream << line;
+        }
+        inputStream.close();
+        outputStream.close();
+    }
+
+    void uploadFile(const string &path) {
+        ofstream outputStream;
+        outputStream.open(path);
+        string line;
+        while ((line = read())!="done") {
+            outputStream << line;
+        }
+        outputStream.close();
+    }
+
+
     // you may add additional methods here
 };
 
 // you may add here helper classes
 class CLI_Data{
-    vector<AnomalyReport> reports;
-
+    vector<AnomalyReport>* reports;
+    float correlation;
+public:
+    CLI_Data(){
+        this->correlation = 0.9;
+    }
+    float getCorrelation(){
+        return this->correlation;
+    }
 };
 
 // you may edit this class
 class Command{
+protected:
     DefaultIO* dio;
+    CLI_Data* data;
 public:
-    Command(DefaultIO* dio):dio(dio){}
-    virtual void execute()=0;
+    string description;
+    Command(DefaultIO* dio , string description, CLI_Data* data){
+        this->dio = dio;
+        this->description = std::move(description);
+        this->data = data;
+    }
+    virtual void execute() = 0;
     virtual ~Command(){}
-};
-
-// implement here your command classes
-class UploadTimeCommand: Command{
-    virtual void execute(){
-
+    string getDescription(){
+        return this->description;
     }
 };
 
-class AlgorithmCommand: Command{
+// implement here your command classes
+class UploadTimeCommand: public Command{
+public:
+    UploadTimeCommand(DefaultIO* dio, string description, CLI_Data* data): Command(dio, std::move(description), data){}
+    virtual void execute(){
+        this->dio->write("please upload your local train csv file.\n");
+        this->dio->uploadFile("anomalyTrain.csv");
+        this->dio->write("Upload Complete.\n");
+        this->dio->write("please upload your local train csv file.\n");
+        this->dio->uploadFile("anomalyTest.csv");
+        this->dio->write("Upload Complete.\n");
+    }
+};
+
+class SettingsCommand: public Command{
+
+public:
+    SettingsCommand(DefaultIO* dio, string description, CLI_Data* data): Command(dio, std::move(description), data){}
+    virtual void execute(){
+        this->dio->write("The current correlation threshold is");
+        this->dio->write(this->data->getCorrelation());
+        float newCorrelation;
+        this->dio->read(&newCorrelation);
+        while(newCorrelation<0 || newCorrelation>1){
+            this->dio->write("please choose a value between 0 and 1.");
+            this->dio->write("The current correlation threshold is");
+            this->dio->write(this->data->getCorrelation());
+            this->dio->read(&newCorrelation);
+        }
+    }
+};
+
+class DetectCommand: public Command{
 
 };
 
-class DetectCommand: Command{
-    AnomalyReport r;
-};
-
-class DisplayCommand: Command{
+class DisplayCommand: public Command{
 
 };
 
-class UploadAnomaliesCommand: Command{
+class UploadAnomaliesCommand: public Command{
 
 };
 
-class ExitCommand: Command{
+class ExitCommand: public Command{
 
 };
 

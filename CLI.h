@@ -18,6 +18,7 @@ public:
     CLI(DefaultIO* dio);
     void start();
     virtual ~CLI();
+    void printMenu();
 };
 
 #endif /* CLI_H_ */
