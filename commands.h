@@ -1,0 +1,8 @@
+//
+// Created by LordMatansha on 12/12/21.
+//
+
+#ifndef ANOMALYDETECTOR_COMMANDS_H
+#define ANOMALYDETECTOR_COMMANDS_H
+
+#endif //ANOMALYDETECTOR_COMMANDS_H
