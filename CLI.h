@@ -5,11 +5,14 @@
 
 #include <string.h>
 #include "commands.h"
+#include "DefaultIO.h"
 
 using namespace std;
 
 class CLI {
     DefaultIO* dio;
+    array<Command*, 6> commands;
+
     // you can add data members
 public:
     CLI(DefaultIO* dio);
