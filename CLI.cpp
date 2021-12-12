@@ -1,13 +1,17 @@
 #include "CLI.h"
-#include "DefaultIO.h"
 
 CLI::CLI(DefaultIO* dio) {
     this->dio = dio;
 }
 
 void CLI::start(){
-    Command* a = new UploadTimeCommand()
-    Command* a = new UploadAnomaliesCommand()
+    Command* one = new UploadTimeCommand();
+    Command* two = new AlgorithmCommand();
+    Command* three = new DetectCommand();
+    Command* four = new DisplayCommand();
+    Command* five = new UploadAnomaliesCommand();
+    Command* six = new ExitCommand();
+    this->commands = {one, two, three, four, five, six};
 }
 
 

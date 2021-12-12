@@ -5,13 +5,13 @@
 
 #include <string.h>
 #include "commands.h"
-#include "DefaultIO.h"
 
 using namespace std;
 
 class CLI {
     DefaultIO* dio;
-    array<Command*, 6> commands;
+    vector<Command*> commands;
+    CLI_Data data; // the data needed for the cli program- reports, etc.
 
     // you can add data members
 public:

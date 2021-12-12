@@ -24,7 +24,10 @@ public:
 };
 
 // you may add here helper classes
+class CLI_Data{
+    vector<AnomalyReport> reports;
 
+};
 
 // you may edit this class
 class Command{
@@ -37,7 +40,9 @@ public:
 
 // implement here your command classes
 class UploadTimeCommand: Command{
+    virtual void execute(){
 
+    }
 };
 
 class AlgorithmCommand: Command{
@@ -45,7 +50,7 @@ class AlgorithmCommand: Command{
 };
 
 class DetectCommand: Command{
-
+    AnomalyReport r;
 };
 
 class DisplayCommand: Command{
@@ -56,7 +61,7 @@ class UploadAnomaliesCommand: Command{
 
 };
 
-class exitCommand: Command{
+class ExitCommand: Command{
 
 };
 
