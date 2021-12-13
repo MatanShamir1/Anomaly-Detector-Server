@@ -49,7 +49,7 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
 
 void SimpleAnomalyDetector::insertData(float correlation, correlatedFeatures* ptr_appendData,
                                                      int num_of_samples, vector<Point *> featurePoint) {
-    if (correlation >= 0.9) {
+    if (correlation >= this->linearCorrelation) {
         ptr_appendData->lin_reg = linear_reg(&(featurePoint[0]), num_of_samples);
         // send to check the most further point from the linear.
         ptr_appendData->threshold = maxDevPoint(ptr_appendData->lin_reg, &(featurePoint[0]), num_of_samples) * oneDotOne;

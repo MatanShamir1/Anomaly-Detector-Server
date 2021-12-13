@@ -1,10 +1,7 @@
 
 #include "HybridAnomalyDetector.h"
 
-HybridAnomalyDetector::HybridAnomalyDetector() {
-    // TODO Auto-generated constructor stub
 
-}
 
 HybridAnomalyDetector::~HybridAnomalyDetector() {
     // TODO Auto-generated destructor stub
@@ -12,7 +9,7 @@ HybridAnomalyDetector::~HybridAnomalyDetector() {
 
 void HybridAnomalyDetector::insertData(float correlation, correlatedFeatures* ptr_appendData,
                                                      int num_of_samples, vector<Point *> featurePoint){
-    if (correlation >= 0.9) {
+    if (correlation >= this->linearCorrelation) {
         SimpleAnomalyDetector::insertData(correlation, ptr_appendData, num_of_samples, featurePoint);
     } else if (correlation >= 0.5){
         ptr_appendData->minCircle = findMinCircle(&(featurePoint[0]), featurePoint.size());
