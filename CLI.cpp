@@ -18,17 +18,18 @@ void CLI::start() {
     string option = dio->read();
     while(option != "6"){
         int i = stoi(option);
-        this->commands[i]->execute();
+        this->commands[i-1]->execute();
         printMenu();
         option = dio->read();
     }
 }
 
 void CLI::printMenu() {
-    cout << "Welcome to the Anomaly Detection Server" << endl;
-    cout << "Please choose an option" << endl;
-    for (int i = 0; i < 5; i++) {
-        cout << i << "." << commands[i]->getDescription() << endl;
+    this->dio->write("Welcome to the Anomaly Detection Server.\n");
+    this->dio->write("Please choose an option:\n");
+    for (int i = 0; i <= 5; i++) {
+         string string1 = commands[i]->description;
+        this->dio->write(to_string(i+1) + "." + string1 + "\n");
     }
 }
 
