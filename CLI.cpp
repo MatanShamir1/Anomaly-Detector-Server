@@ -1,4 +1,3 @@
-
 #include "CLI.h"
 
 CLI::CLI(DefaultIO* dio) {
@@ -28,7 +27,7 @@ void CLI::printMenu() {
     this->dio->write("Welcome to the Anomaly Detection Server.\n");
     this->dio->write("Please choose an option:\n");
     for (int i = 0; i <= 5; i++) {
-         string string1 = commands[i]->description;
+        string string1 = commands[i]->description;
         this->dio->write(to_string(i+1) + "." + string1 + "\n");
     }
 }
