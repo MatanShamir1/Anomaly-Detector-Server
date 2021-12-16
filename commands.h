@@ -1,14 +1,16 @@
 #ifndef COMMANDS_H_
 #define COMMANDS_H_
 
-#include<iostream>
+#include <iostream>
 #include <string.h>
-#include "Server.h"
 #include <fstream>
-#include <utility>
 #include <vector>
 #include "HybridAnomalyDetector.h"
-#include "timeseries.h"
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <unistd.h>
+#include <iomanip>
+#include <sstream>
 
 using namespace std;
 
@@ -112,6 +114,7 @@ class SocketIO: public DefaultIO{
     int client_ID;
     int buffer_size;
     //class constructor.
+public:
     SocketIO(int client_ID):client_ID(client_ID){this->buffer_size = 1024;}
 
     //the first "read" function- readline, this time- from a socket connection.

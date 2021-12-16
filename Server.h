@@ -17,7 +17,6 @@
 #include <istream>
 #include <unistd.h>
 #include "CLI.h"
-#include "commands.h"
 
 
 using namespace std;
@@ -29,15 +28,12 @@ public:
 };
 
 
-// you can add helper classes here and implement on the cpp file
-
-
 // edit your AnomalyDetectionHandler class here
 class AnomalyDetectionHandler:public ClientHandler{
 public:
     virtual void handle(int clientID){
         SocketIO sio(clientID);
-        CLI cli(sio);
+        CLI cli(&sio);
         cli.start();
     }
 };
