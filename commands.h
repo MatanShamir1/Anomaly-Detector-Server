@@ -119,8 +119,8 @@ public:
 
     //the first "read" function- readline, this time- from a socket connection.
     virtual string read(){
-        string result = "";
-        char getter;
+        string result;
+        char getter=0;
         recv(client_ID, &getter, sizeof(char),0);
         while(getter!='\n'){
             result += getter;
@@ -129,7 +129,7 @@ public:
         return result;
     }
     virtual void write(string text){
-        send(client_ID, text.c_str(),text.size(),0);
+        send(client_ID, text.c_str(),text.length(),0);
     }
     virtual void write(float f){
         string num = to_string(f);

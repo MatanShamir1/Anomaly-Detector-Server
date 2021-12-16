@@ -34,4 +34,6 @@ void CLI::printMenu() {
 
 
 CLI::~CLI() {
+    for (auto c : commands)
+        delete c;
 }

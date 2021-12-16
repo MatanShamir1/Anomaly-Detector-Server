@@ -18,7 +18,6 @@ Server::Server(int port)throw (const char*) {
     }
 }
 void sig_handler(int signum){
-
     printf("Inside handler function\n");
 }
 void Server::start(ClientHandler& ch)throw(const char*){
@@ -31,15 +30,15 @@ void Server::start(ClientHandler& ch)throw(const char*){
         signal(SIGALRM , sig_handler);
         while(!stop_server){
             //maybe set time out to this accept, if the condition was true but there is no other client actually.
-            alarm(10);
+            alarm(1);
             int client_ID = accept(this->server_socket,(sockaddr*)&this->my_addr, &this->client_size);
             if(client_ID>0){
                 ch.handle(client_ID);
+                close(client_ID);
             } else{
                 throw("accept failed");
             }
             alarm(0);
-            close(client_ID);
         }
         //close the server socket when finished with all clients- stop listening in this port.
         close(server_socket);
