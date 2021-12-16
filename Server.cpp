@@ -1,4 +1,6 @@
 
+#include <csignal>
+#include <signal.h>
 #include "Server.h"
 
 Server::Server(int port)throw (const char*) {
@@ -15,7 +17,10 @@ Server::Server(int port)throw (const char*) {
         throw("bind failed");
     }
 }
+void sig_handler(int signum){
 
+    printf("Inside handler function\n");
+}
 void Server::start(ClientHandler& ch)throw(const char*){
     //create a new thread with this pointer and the client handler for it to deal with clients.
     this->t = new thread([&ch, this](){
@@ -23,13 +28,17 @@ void Server::start(ClientHandler& ch)throw(const char*){
         if(listen(server_socket, 3)<0){
             throw("listen failed");
         }
+        signal(SIGALRM , sig_handler);
         while(!stop_server){
             //maybe set time out to this accept, if the condition was true but there is no other client actually.
+            alarm(10);
             int client_ID = accept(this->server_socket,(sockaddr*)&this->my_addr, &this->client_size);
-            if(client_ID<0){
+            if(client_ID>0){
+                ch.handle(client_ID);
+            } else{
                 throw("accept failed");
             }
-            ch.handle(client_ID);
+            alarm(0);
             close(client_ID);
         }
         //close the server socket when finished with all clients- stop listening in this port.

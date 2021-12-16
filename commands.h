@@ -111,6 +111,7 @@ public:
 };
 
 class SocketIO: public DefaultIO{
+public:
     int client_ID;
     //class constructor.
 public:
@@ -194,7 +195,7 @@ public:
         this->dio->read(&newCorrelation);
         while (newCorrelation < 0 || newCorrelation > 1) {
             this->dio->write("please choose a value between 0 and 1.\n");
-            this->dio->write("The current correlation threshold is");
+            this->dio->write("The current correlation threshold is ");
             this->dio->write(this->data->getCorrelation());
             this->dio->write("\nType a new threshold\n");
             this->dio->read(&newCorrelation);
