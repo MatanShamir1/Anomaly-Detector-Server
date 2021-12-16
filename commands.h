@@ -3,7 +3,7 @@
 
 #include<iostream>
 #include <string.h>
-
+#include "Server.h"
 #include <fstream>
 #include <utility>
 #include <vector>
@@ -108,7 +108,35 @@ public:
     // you may add additional methods here
 };
 
-// you may add here helper classes
+class SocketIO: public DefaultIO{
+    int client_ID;
+    int buffer_size;
+    //class constructor.
+    SocketIO(int client_ID):client_ID(client_ID){this->buffer_size = 1024;}
+
+    //the first "read" function- readline, this time- from a socket connection.
+    virtual string read(){
+        string result = "";
+        char getter;
+        recv(client_ID, &getter, sizeof(char),0);
+        while(getter!='\n'){
+            result += getter;
+            recv(client_ID, &getter, sizeof(char),0);
+        }
+        return result;
+    }
+    virtual void write(string text){
+        send(client_ID, text.c_str(),buffer_size,0);
+    }
+    virtual void write(float f){
+        string num = to_string(f);
+        write(num);
+    }
+
+    virtual void read(float *f){
+        *f = stof(read());
+    }
+};
 
 // you may edit this class
 class Command {

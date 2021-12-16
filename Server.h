@@ -7,6 +7,17 @@
 
 #ifndef SERVER_H_
 #define SERVER_H_
+#include <pthread.h>
+#include <thread>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <string>
+#include <cstring>
+#include <iostream>
+#include <istream>
+#include <unistd.h>
+#include "CLI.h"
+#include "commands.h"
 
 
 using namespace std;
@@ -25,15 +36,20 @@ public:
 class AnomalyDetectionHandler:public ClientHandler{
 public:
     virtual void handle(int clientID){
-
+        SocketIO sio(clientID);
+        CLI cli(sio);
+        cli.start();
     }
 };
 
 
 // implement on Server.cpp
 class Server {
+    int server_socket;
     thread* t; // the thread to run the start() method in
     bool stop_server;
+    sockaddr_in my_addr;
+    socklen_t client_size;
 
     // you may add data members
 
