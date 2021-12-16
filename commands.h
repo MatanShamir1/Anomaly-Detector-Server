@@ -112,10 +112,9 @@ public:
 
 class SocketIO: public DefaultIO{
     int client_ID;
-    int buffer_size;
     //class constructor.
 public:
-    SocketIO(int client_ID):client_ID(client_ID){this->buffer_size = 1024;}
+    SocketIO(int client_ID):client_ID(client_ID){}
 
     //the first "read" function- readline, this time- from a socket connection.
     virtual string read(){
@@ -129,7 +128,7 @@ public:
         return result;
     }
     virtual void write(string text){
-        send(client_ID, text.c_str(),buffer_size,0);
+        send(client_ID, text.c_str(),text.size(),0);
     }
     virtual void write(float f){
         string num = to_string(f);
